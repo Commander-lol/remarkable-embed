@@ -14,5 +14,13 @@
     "plugin"
   ],
   "author": "Louis Capitanchik <contact@louiscap.co>",
-  "license": "BSD-3-Clause"
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Commander-lol/remarkable-embed.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Commander-lol/remarkable-embed/issues"
+  },
+  "homepage": "https://github.com/Commander-lol/remarkable-embed#readme"
 }
