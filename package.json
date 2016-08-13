@@ -1,0 +1,18 @@
+{
+  "name": "remarkable-embed",
+  "version": "0.2.3",
+  "description": "Extensible Remarkable plugin for embedding content in markdown",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "keywords": [
+    "remarkable",
+    "markdown",
+    "embed",
+    "extension",
+    "plugin"
+  ],
+  "author": "Louis Capitanchik <contact@louiscap.co>",
+  "license": "BSD-3-Clause"
+}
