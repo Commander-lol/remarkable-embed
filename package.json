@@ -1,6 +1,6 @@
 {
   "name": "remarkable-embed",
-  "version": "0.1.0",
+  "version": "0.2.3",
   "description": "Extensible Remarkable plugin for embedding content in markdown",
   "main": "index.js",
   "scripts": {
