@@ -1,5 +1,10 @@
 # remarkable-embed
-Adds extensible content embedding to Remarkable
+Provides the `{@plugin: slug}` syntax to remarkable, allowing you to embed rich content in your documents as defined
+by any given plugins.
+
+By default `remarkable-embed` comes with two plugins: One for [youtube](https://youtube.com) videos and one for [codepen.io](https://codepen.io) pens.
+
+Creating new plugins is also super simple - The Youtube plugin showcases a straight forward embed and the Codepen plugin showcases usage of the `remarkable` options object
 
 ## Installation
 `npm install --save remarkable-embed`
@@ -53,4 +58,4 @@ be passed to the plugin. The example youtube extension takes either the full emb
 
 ## Extensions - Creating
 A `remarkable-embed` plugin is a simple function with the signature `plugin(meta[, opts])` where `meta` is the arbitrary
-string that doesn't contains whitespace captured by the markdown tag, and options is the options object that the `Remarkable` parser 
+string that doesn't contains whitespace captured by the markdown tag, and options is the options object that was passed to the `Remarkable` parser when it was created
