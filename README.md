@@ -1,6 +1,9 @@
 # remarkable-embed
+
 Provides the `{@plugin: slug}` syntax to remarkable, allowing you to embed rich content in your documents as defined
 by any given plugins.
+
+See `[remarkable-embed tonic](https://tonicdev.com/npm/remarkable-embed)` to try it in your browser
 
 By default `remarkable-embed` comes with two plugins: One for [youtube](https://youtube.com) videos and one for [codepen.io](https://codepen.io) pens.
 

@@ -1,6 +1,6 @@
 {
   "name": "remarkable-embed",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Extensible Remarkable plugin for embedding content in markdown",
   "main": "index.js",
   "scripts": {
@@ -22,5 +22,6 @@
   "bugs": {
     "url": "https://github.com/Commander-lol/remarkable-embed/issues"
   },
+  "tonicExample": "tonic.js",
   "homepage": "https://github.com/Commander-lol/remarkable-embed#readme"
 }
