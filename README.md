@@ -1,16 +1,27 @@
-# remarkable-embed
+# remarkably-simple-tags
 
-Provides the `{@plugin: slug}` and `{@plugin: parameter1[ parameter2...]}` syntaxes to remarkable,
-allowing you to embed rich content in your documents as defined by any given plugins.
+Provides the `{@plugin: parameters}` syntax to remarkable, allowing you to
+easily create your own tags including tags to embed rich content in your
+documents as defined by any given plugins.
 
-See '[remarkable-embed tonic](https://tonicdev.com/npm/remarkable-embed)' to try it in your browser
+Forked from
+[remarkable-embeded](https://github.com/Commander-lol/remarkable-embed).
+Credits to [Commander-lol](https://github.com/Commander-lol) for most
+of the code
 
-By default `remarkable-embed` comes with two plugins: One for [youtube](https://youtube.com) videos and one for [codepen.io](https://codepen.io) pens.
+Try in your browser with
+[tonic](https://tonicdev.com/npm/remarkably-simple-tags)
 
-Creating new plugins is also super simple - The Youtube plugin showcases a straight forward embed and the Codepen plugin showcases usage of the `remarkable` options object
+By default `remarkably-simple-tags` comes with two plugins: One for
+[youtube](https://youtube.com) videos and one for
+[codepen.io](https://codepen.io) pens.
+
+Creating new plugins is also super simple - The Youtube plugin showcases a
+straight forward embed and the Codepen plugin showcases usage of the
+`remarkable` options object
 
 ## Installation
-`npm install --save remarkable-embed`
+`npm install --save remarkably-simple-tags`
 
 ## Usage - Code
 
@@ -18,39 +29,43 @@ _This module is not built with transpiled/es6, but the examples are simpler with
 
 ```javascript
 import Remarkable from 'remarkable';
-import { Plugin as Embed, extensions } from 'remarkable-embed';
+import { Plugin as RST, extensions } from 'remarkably-simple-tags';
 
 const md = new Remarkable()
 
-const embed = new Embed()
-embed.register('youtube', extensions.youtube)
+const rst = new RST()
+rst.register('youtube', extensions.youtube)
 
-md.use(embed.hook)
+md.use(rst.hook)
 md.render('This vid is gr8 m8 {@youtube: dQw4w9WgXcQ}')
 
 // Output: '<p>This vid is gr8 m8 </p><iframe type="text/html" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"></iframe>'
 ```
 
-Plugins can also be registered by passing an object to `Embed#register()`, in which case they will all
-be registered by the key in the object.
+Plugins can also be registered by passing an object to `Embed#register()`,
+in which case they will all be registered by the key in the object.
 
 ```javascript
-embed.register({
+rst.register({
   youtube: extensions.youtube
 })
 ```
 
-The `extensions` object provided alongside `remarkable-embed` can also be passed directly to register to use
-all of the built in extensions.
+The `extensions` object provided alongside `remarkably-simple-tags` can also
+be passed directly to register to use all of the built in extensions.
 
 ```javascript
-embed.register(extensions)
+rst.register(extensions)
 ```
 
 ## Usage - Markdown
-Plugins extend the markdown syntax by adding constructs of the form `{@[name]: [meta]}`, where `[name]`
-is the name used to register the plugin with `remarkable-embed` and `[meta]` is the information that will
-be passed to the plugin. The example youtube extension takes either the full embed link or the video id.
+Plugins extend the markdown syntax by adding constructs of the form
+`{[name: parameter[ parameters...]}`, where `name` is the name used to
+register the plugin with `remarkably-simple-tags` and `parameter(s)` is the
+space-separated information that will be passed to the plugin. Parameters can
+be quoteed to include spaces and quotes and curly braces should be escaped
+with \\. The example youtube extension takes either the full embed link or
+the video id.
 
 ## Extensions - Built in
 
@@ -60,13 +75,17 @@ be passed to the plugin. The example youtube extension takes either the full emb
  - Full embed link (e.g. `https://www.youtube.com/embed/wsQGwDy1lvg`)
 
 ## Extensions - Creating
-A `remarkable-embed` plugin is a simple function with the signature `plugin(meta[, opts])` where `meta` is the arbitrary
-string that doesn't contains whitespace captured by the markdown tag, and options is the options object that was passed to the `Remarkable` parser when it was created
+A `remarkable-embed` plugin is a simple function with the signature
+`plugin(parameters[, opts])` where `parameters` is and array of the parameters
+separated by whitespace captured by the markdown tag, and options is the
+options object that was passed to the `Remarkable` parser when it was created.
 
-If your plugin requires multiple parameters, pass `true` as the second parameter when
-registering the plugin.
+If your plugin is built for remarkable-embed, pass `true` as the third
+parameter when registering the plugin.
 ```javascript
-embed.register('mytag', myplugin, true);
+const myplugin = (slug, opts) => {
+  return 'Something cool: ' + slug;
+};
+
+rst.register('mytag', myplugin, true);
 ```
-Plugins registered this way instead of receiving a slug string will receive an array of parameters
-captured by the markdown tag that were separated by spaces.

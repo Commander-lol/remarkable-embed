@@ -1,6 +1,6 @@
 {
-  "name": "remarkable-embed",
-  "version": "0.5.0",
+  "name": "remarkably-simple-stags",
+  "version": "1.0.0",
   "description": "Extensible Remarkable plugin for embedding content in markdown",
   "main": "index.js",
   "scripts": {
@@ -13,20 +13,27 @@
     "extension",
     "plugin"
   ],
-  "author": "Louis Capitanchik <contact@louiscap.co>",
+  "author": {
+    "name": "Jack Farley",
+    "email": "or4e3dsw@bytes.nz",
+    "url": "https://bytes.nz)"
+  },
   "contributors": [
-    "Jack Farley <or4e3dsw@bytes.nz> (https://bytes.nz)"
+    {
+      "name": "Louis Capitanchik",
+      "email": "contact@louiscap.co"
+    }
   ],
-  "license": "BSD-3-Clause",
+  "license": "GPL-3.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Commander-lol/remarkable-embed.git"
+    "url": "git+https://github.com/Commander-lol/remarkably-simple-tags.git"
   },
   "bugs": {
-    "url": "https://github.com/Commander-lol/remarkable-embed/issues"
+    "url": "https://github.com/Commander-lol/remarkably-simple-tags/issues"
   },
   "tonicExampleFilename": "tonic.js",
-  "homepage": "https://github.com/Commander-lol/remarkable-embed#readme",
+  "homepage": "https://github.com/Commander-lol/remarkably-simple-tags#readme",
   "devDependencies": {
     "ava": "^0.25.0"
   }
