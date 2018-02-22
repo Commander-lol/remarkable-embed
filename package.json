@@ -23,5 +23,8 @@
     "url": "https://github.com/Commander-lol/remarkable-embed/issues"
   },
   "tonicExampleFilename": "tonic.js",
-  "homepage": "https://github.com/Commander-lol/remarkable-embed#readme"
+  "homepage": "https://github.com/Commander-lol/remarkable-embed#readme",
+  "devDependencies": {
+    "ava": "^0.25.0"
+  }
 }
