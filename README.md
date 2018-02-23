@@ -1,7 +1,7 @@
 # remarkable-embed
 
-Provides the `{@plugin: slug}` syntax to remarkable, allowing you to embed rich content in your documents as defined
-by any given plugins.
+Provides the `{@plugin: slug}` and `{@plugin: parameter1[ parameter2...]}` syntaxes to remarkable,
+allowing you to embed rich content in your documents as defined by any given plugins.
 
 See '[remarkable-embed tonic](https://tonicdev.com/npm/remarkable-embed)' to try it in your browser
 
@@ -48,7 +48,7 @@ embed.register(extensions)
 ```
 
 ## Usage - Markdown
-Plugins extend the markdown syntax by adding constructs of the form `{@[name]: [meta]}`, where `[name]` 
+Plugins extend the markdown syntax by adding constructs of the form `{@[name]: [meta]}`, where `[name]`
 is the name used to register the plugin with `remarkable-embed` and `[meta]` is the information that will
 be passed to the plugin. The example youtube extension takes either the full embed link or the video id.
 
@@ -62,3 +62,11 @@ be passed to the plugin. The example youtube extension takes either the full emb
 ## Extensions - Creating
 A `remarkable-embed` plugin is a simple function with the signature `plugin(meta[, opts])` where `meta` is the arbitrary
 string that doesn't contains whitespace captured by the markdown tag, and options is the options object that was passed to the `Remarkable` parser when it was created
+
+If your plugin requires multiple parameters, pass `true` as the second parameter when
+registering the plugin.
+```javascript
+embed.register('mytag', myplugin, true);
+```
+Plugins registered this way instead of receiving a slug string will receive an array of parameters
+captured by the markdown tag that were separated by spaces.

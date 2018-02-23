@@ -1,10 +1,10 @@
 {
   "name": "remarkable-embed",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "Extensible Remarkable plugin for embedding content in markdown",
   "main": "index.js",
   "scripts": {
-    "test": "make test"
+    "test": "ava"
   },
   "keywords": [
     "remarkable",
@@ -14,6 +14,9 @@
     "plugin"
   ],
   "author": "Louis Capitanchik <contact@louiscap.co>",
+  "contributors": [
+    "Jack Farley <or4e3dsw@bytes.nz> (https://bytes.nz)"
+  ],
   "license": "BSD-3-Clause",
   "repository": {
     "type": "git",
