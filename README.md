@@ -1,5 +1,7 @@
 # remarkably-simple-tags
 
+[![Build Status](https://travis-ci.org/bytesnz/remarkably-simple-tags.svg?branch=master)](https://travis-ci.org/bytesnz/remarkably-simple-tags)
+
 Provides the `{@plugin[: parameters [parameters...]]}` syntax to remarkable,
 allowing you to easily create your own tags including tags to embed rich
 content in your documents as defined by any given plugins.
