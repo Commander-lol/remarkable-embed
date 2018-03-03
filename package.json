@@ -1,5 +1,5 @@
 {
-  "name": "remarkably-simple-stags",
+  "name": "remarkably-simple-tags",
   "version": "1.0.0",
   "description": "Extensible Remarkable plugin for embedding content in markdown",
   "main": "index.js",

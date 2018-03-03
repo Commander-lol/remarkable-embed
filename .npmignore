@@ -1,0 +1,7 @@
+*~
+*-
+.*.sw?
+yarn.lock
+*.test.*
+tonic.js
+.travis.yml
