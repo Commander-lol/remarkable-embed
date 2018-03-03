@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- 8.9.4
+deploy:
+  provider: npm
+  email: wt3kd893td@bytes.nz
+  on:
+    branch: master
+  api_key:
+    secure: lo0FCt58XteOyGrBI9txahvlw2pTzULo73l9dJ+skGLz6OB6YtOjHU2UcAStxreaPpMTblxuCuRqGCtIGvhUjkvv3l+EhpxzWtNFZfkN+HeoxvRFktVv/xAd9rmYiLq4jyK/qas6sykdh22cKbNOAF+Gz5W+8tgcod1lNLsysJJrYsbrnTw1kUCBI8wjVsbBN9GBUnVYQchTUq6OHaridkKeKiQl5RH2M4YfodbrrgpoMmYCHVgtbMkLlsc9MwZ2GyQAqS2s/BuHf0N9Mtw4U3mal/YsB9vvh1fpsV7F1Oojj0T5X/kRfVNIweC97YMrf4Ck3dFnyJVD4Hu53z+itp5MZMyFdH4OzFA/uzRPp6A05se7YEyC+ORrKhDeWRSR9yjQlKw7GV4CSYspXoTKBXHv8bj1KBf026XHvGfisQcDXBvLJeIuEz05U2x+vF9a0dZVmbQBZ6/EVaNGZeQEeCmkFIu5CXk2IQaHoXOCJ2PAbSGDnjOTc6pf+tGOr17b42P46zUlINpjAO95HQ0bslrLgDgCIoRAm3iKO+z03Tiem65lW8rLs1fzgPI84ErhW/6bm7WivwCEkazijWOVT5heRGKOhdq4qM1+NkuiCwL6JSBFaPKQPPSN2Vwv6eZMJiaoNHgjsllvAfIh66lAE4znkTgSAzVXo5y8749ZSmE=

@@ -1,22 +1,22 @@
 const Remarkable = require('remarkable');
-const reEmbed = require('remarkable-embed');
+const RST = require('remarkably-simple-tags');
 
 const md = new Remarkable('full', {
-	codepen: {
-		defaultTab: 'result',
-		height: 256,
-		themeId: '0'
-	}
+  codepen: {
+    defaultTab: 'result',
+    height: 256,
+    themeId: '0'
+  }
 });
 
-const embed = new reEmbed.Plugin;
+const rst = new RST.Plugin();
 
-embed.register(reEmbed.extensions);
+rst.register(RST.extensions);
 
-md.use(embed.hook);
+md.use(rst.hook);
 
 console.log(md.render(`
-### This is remarkable embed
+### This is remarkably-simple-tags
 
 Haha, this is a super cool video: {@youtube: dQw4w9WgXcQ}
 
