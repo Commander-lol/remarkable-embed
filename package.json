@@ -35,6 +35,7 @@
   "tonicExampleFilename": "tonic.js",
   "homepage": "https://github.com/Commander-lol/remarkably-simple-tags#readme",
   "devDependencies": {
-    "ava": "^0.25.0"
+    "ava": "^0.25.0",
+    "remarkable": "^1.7.1"
   }
 }
