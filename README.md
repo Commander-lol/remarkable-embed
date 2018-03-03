@@ -1,8 +1,8 @@
 # remarkably-simple-tags
 
-Provides the `{@plugin: parameters}` syntax to remarkable, allowing you to
-easily create your own tags including tags to embed rich content in your
-documents as defined by any given plugins.
+Provides the `{@plugin[: parameters [parameters...]]}` syntax to remarkable,
+allowing you to easily create your own tags including tags to embed rich
+content in your documents as defined by any given plugins.
 
 Forked from
 [remarkable-embeded](https://github.com/Commander-lol/remarkable-embed).
@@ -60,7 +60,7 @@ rst.register(extensions)
 
 ## Usage - Markdown
 Plugins extend the markdown syntax by adding constructs of the form
-`{[name: parameter[ parameters...]}`, where `name` is the name used to
+`{[name[: parameter[ parameters...]]}`, where `name` is the name used to
 register the plugin with `remarkably-simple-tags` and `parameter(s)` is the
 space-separated information that will be passed to the plugin. Parameters can
 be quoteed to include spaces and quotes and curly braces should be escaped
